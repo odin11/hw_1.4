@@ -21,29 +21,18 @@ public class Main {
 
     //task2
 
-        int firstFriday = 6;
-        int j =1;
-        while (j<=31){
-            if (j == firstFriday) {
-                for (;j<=31;j = j + 7) {
-                    System.out.println("Сегодня пятница, "+ j + "-е число. Необходимо подготовить отчет.");
-                }
-            } else {
-                j = j+1;
-            }
-
+        int firstFriday = 5;
+        for (int j =firstFriday;j<=31;j = j + 7) {
+            System.out.println("Сегодня пятница, "+ j + "-е число. Необходимо подготовить отчет.");
         }
 
     //task3
 
         int currentYear = 2022;
-        int y = 0;
         int start = currentYear - 200;
         int end = currentYear + 100;
-        //while ((y >= start) && (y <= end)){
-        while (y < end){
-            y = y + 79;
-            if ((y >= start)&&(y<=end)){
+        for ( int y = start; y <= end; y++) {
+            if (y % 79 == 0) {
                 System.out.println(y);
             }
         }
